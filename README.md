@@ -5,6 +5,6 @@ Este repositorio incluye actividades llevadas a cabo en el módulo DAW
 
 |Ejercicios|Descripción|
 |----------|-----------|
-|[Ejercicio 1](DAW/Tema0/Ejercicio1.md)|Practica servidor Web|
+|[Ejercicio 1](Tema0/Ejercicio1.md)|Practica servidor Web|
 |[Ejercicio 1](Tema0/Ejercicio1.md)|Practica servidor Web|
 
