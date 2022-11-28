@@ -108,11 +108,21 @@ Ya tenemos instalado Wordpress y ahora accedemos via Web a nuestro servidor
 
 ### - Instala y configura awstat.
 
-Instalamos el wwastat con el comando 
+Instalamos el AWwastat con el comando 
 
 ``` sudo apt-get install awstats ```
 
-Hacemos una copia y trabajaremos en ella sudo cp /etc/awstats/awstats.conf /etc/awstats/awstats.centro.intranet.conf
+#### Ahora vamos a configurar AWstats
+
+Vamos a crear un archivo de configuracion sobre el dominio de centro.intranet
+
+Hacemos una copia y trabajaremos en ella 
+
+``` sudo cp /etc/awstats/awstats.conf /etc/awstats/awstats.centro.intranet.conf ```
+
+y con sudo nano aplicamos estos cambios
+
+
 
 
 
