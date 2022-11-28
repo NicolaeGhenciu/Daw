@@ -133,7 +133,9 @@ Configuramos apache para AWstats
 Ahora copiamos el contenido de la carpeta «cgi-bin» en el directorio raíz del documento por defecto de su instalación de Apache. Por defecto se encuentra en la carpeta «/usr/lib/cgi-bin».
 
 ``` sudo cp -r /usr/lib/cgi-bin /var/www/html/ ```
+
 ``` sudo chown www-data:www-data /var/www/html/cgi-bin/ ```
+
 ``` sudo chmod -R 755 /var/www/html/cgi-bin/ ```
 
 Ahora accedemos a la pagina
