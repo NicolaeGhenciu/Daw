@@ -324,7 +324,11 @@ Se mostrará la pantalla de inicio de sesión de PhpMyAdmin.
 
 ![imagen24](Fotos/23.png)
 
-tambien podemos poner servidor2.centro.intranet ya que lo añadimos al principio de este ejercicio
+Ahora nos vamos a /etc/hosts y añadimos el dominio servidor2.centro.intranet que nos pide el ejercicio, lo modificamos con nano y nos quedaria asi
+
+![imagen25](Fotos/20.png)
+
+Ahora accedemos usando dicha direccion
 
 http://servidor2.centro.intranet:8080/phpmyadmin/
 
