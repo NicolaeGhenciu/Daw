@@ -213,5 +213,25 @@ Descargamos el paquete de instalación de PhpMyAdmin.
 
 ``` tar -zxvf phpMyAdmin-4.9.5-all-languages.tar.gz ```
 
-Impo
+Importamos la plantilla de base de datos de PhpMyAdmin utilizando la cuenta denominada PMA.
+
+``` cd /downloads/phpMyAdmin-4.9.5-all-languages/sql ```
+
+``` mysql -u pma -p phpmyadmin < create_tables.sql ```
+
+Ahora todos los paquetes necesarios para nginx.
+
+``` apt-get install nginx apache2-utils mlocate ```
+
+Instalamos el paquete PHP.
+
+``` apt-get install php-fpm ```
+
+Instalamos los modulos PHP
+
+``` apt-get install php-mysql php-gd php-json php-bcmath php-xml php-mbstring php-zip php-apcu php-curl  ```
+
+
+
+
 
