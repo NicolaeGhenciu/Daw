@@ -318,17 +318,16 @@ Reiniciamos los servicios y vamos al navegador donde vamos a poner nuestra ip
 
 http://10.0.2.15:8080/phpmyadmin/
 
-![imagen24](Fotos/23.png)
-
-tambien podemos poner ya que lo añadimos al principio de este ejercicio
-
-http://servidor2.centro.intranet:8080/phpmyadmin/
-
-![imagen23](Fotos/22.png)
-
 Se mostrará la pantalla de inicio de sesión de PhpMyAdmin.
 
 ![imagen24](Fotos/32.png)
 
+![imagen24](Fotos/23.png)
+
+tambien podemos poner servidor2.centro.intranet ya que lo añadimos al principio de este ejercicio
+
+http://servidor2.centro.intranet:8080/phpmyadmin/
+
+![imagen23](Fotos/22.png)
 
 
