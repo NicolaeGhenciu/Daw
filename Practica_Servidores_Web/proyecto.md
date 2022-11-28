@@ -144,5 +144,74 @@ https://centro.intranet/cgi-bin/awstats.pl?config=centro.intranet
 
 ![imagen17](Fotos/16.png)
 
+## - Instala un segundo servidor de tu elección (nginx, lighttpd) bajo el dominio “servidor2.centro.intranet”. Debes configurarlo para que sirva en el puerto 8080 y haz los cambios necesarios para ejecutar php. Instala phpmyadmin.
 
+Vamos a instalar Nginx con el siguente comando
+
+``` sudo apt install nginx ```
+
+Probamos el servidor en el navegador
+
+![imagen18](Fotos/17.png)
+
+Cambiamos el puerto a 8080 con el siguente comando
+
+``` sudo nano /etc/nginx/sites-available/default ```
+
+![imagen19](Fotos/19.png)
+
+Y lo probamos en el navegador
+
+![imagen20](Fotos/18.png)
+
+Instalamos MySQL
+
+``` apt-get update ```
+
+``` apt-get install mysql-server mysql-client ```
+
+Accedemos al servicio de comandos MySQL
+
+``` mysql -u root -p ```
+
+Establecemos una contraseña para el usuario raiz de MySQL
+
+``` ruby
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'usuario';
+FLUSH PRIVILEGES;
+exit
+
+```
+
+Creamos una base de datos llamada phpmyadmin
+
+``` ruby
+CREATE DATABASE phpmyadmin CHARACTER SET UTF8 COLLATE UTF8_BIN;
+```
+
+Creamos una cuenta de usuario de Mysql denominada PMA
+
+``` ruby
+CREATE USER 'pma'@'%' IDENTIFIED BY 'usuario';
+```
+
+Concedemos el permiso de cuenta de usuario de PMA sobre la base de datos denominada PHPMYADMIN.
+
+``` ruby
+GRANT ALL PRIVILEGES ON phpmyadmin .* TO 'pma'@'%';
+exit
+```
+
+Descargamos el paquete de instalación de PhpMyAdmin.
+
+``` mkdir /downloads ```
+
+``` cd /downloads ```
+
+``` wget https://files.phpmyadmin.net/phpMyAdmin/4.9.5/phpMyAdmin-4.9.5-all-languages.tar.gz ```
+
+``` tar -zxvf phpMyAdmin-4.9.5-all-languages.tar.gz ```
+
+Impo
 
