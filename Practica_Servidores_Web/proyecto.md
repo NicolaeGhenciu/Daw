@@ -108,13 +108,39 @@ Ya tenemos instalado Wordpress y ahora accedemos via Web a nuestro servidor
 
 ## - Instala y configura awstat.
 
-Instalamos el wwastat con el comando 
+Instalamos el AWastat con el comando 
 
 ``` sudo apt-get install awstats ```
 
-Hacemos una copia y trabajaremos en ella 
+Ahora creamos un archivo de configuracion para el dominio centro.intranet.
+
+Duplicamos el archivo de configuracion por defecto.
 
 ``` sudo cp /etc/awstats/awstats.conf /etc/awstats/awstats.centro.intranet.conf ```
+
+Ahora le ponemos la siguente configuracion con el comando:
+
+``` sudo nano /etc/awstats/awstats.conf  ```
+
+![imagen15](Fotos/14.png)
+
+Ahora generamos las estadisticas iniciales
+
+![imagen16](Fotos/15.png)
+
+Configuramos apache para AWstats
+
+Ahora copiamos el contenido de la carpeta «cgi-bin» en el directorio raíz del documento por defecto de su instalación de Apache. Por defecto se encuentra en la carpeta «/usr/lib/cgi-bin».
+
+``` sudo cp -r /usr/lib/cgi-bin /var/www/html/ ```
+``` sudo chown www-data:www-data /var/www/html/cgi-bin/ ```
+``` sudo chmod -R 755 /var/www/html/cgi-bin/ ```
+
+Ahora accedemos a la pagina
+
+https://centro.intranet/cgi-bin/awstats.pl?config=centro.intranet
+
+![imagen17](Fotos/16.png)
 
 
 
