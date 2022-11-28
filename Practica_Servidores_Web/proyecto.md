@@ -14,7 +14,7 @@ Instalación entorno LAMP con el comando
 
 ``` sudo apt install apache2 ```
 
-### - Activar los módulos necesarios para ejecutar php y acceder a mysql
+## - Activar los módulos necesarios para ejecutar php y acceder a mysql
 
 Instalamos el php con 
 
@@ -40,7 +40,7 @@ Ahora habilitamos el host virtual en apache y recargamos apache
 
 ![imagen5](Fotos/4.png)
 
-### - Instalamos y Configuramos Wordpress
+## - Instalamos y Configuramos Wordpress
 
 Creación de una base de datos de MySQL y un usuario para WordPress.
 
@@ -106,23 +106,15 @@ Ya tenemos instalado Wordpress y ahora accedemos via Web a nuestro servidor
 
 ![imagen14](Fotos/11.png)
 
-### - Instala y configura awstat.
+## - Instala y configura awstat.
 
-Instalamos el AWwastat con el comando 
+Instalamos el wwastat con el comando 
 
 ``` sudo apt-get install awstats ```
-
-#### Ahora vamos a configurar AWstats
-
-Vamos a crear un archivo de configuracion sobre el dominio de centro.intranet
 
 Hacemos una copia y trabajaremos en ella 
 
 ``` sudo cp /etc/awstats/awstats.conf /etc/awstats/awstats.centro.intranet.conf ```
-
-y con sudo nano aplicamos estos cambios
-
-
 
 
 
