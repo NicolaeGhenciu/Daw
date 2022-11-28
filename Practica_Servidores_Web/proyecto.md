@@ -231,7 +231,104 @@ Instalamos los modulos PHP
 
 ``` apt-get install php-mysql php-gd php-json php-bcmath php-xml php-mbstring php-zip php-apcu php-curl  ```
 
+Editamos el archivo pho.ini son sudo nano
 
+``` updatedb ```
+
+``` locate php.ini ```
+
+``` nanp /etc/php/7.4/fpm/php.ini ```
+
+He modificado los siguentes campos
+
+``` ruby 
+
+file_uploads = On
+upload_max_filesize = 32M
+max_execution_time = 300
+memory_limit = 256M
+post_max_size = 32M
+max_input_time = 300
+max_input_vars = 4440
+
+```
+
+Habilitamos el soporte PHP para Nginx.
+
+![imagen21](Fotos/30.png)
+
+Comprobamos si el archivo tiene errores con
+
+``` nginx -t ```
+
+Todo ok
+
+``` ruby 
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+```
+
+Reiniciamos el servicio PHP.
+
+``` service php7.4-fpm restart ```
+
+Reiniciamos el servicio Nginx.
+
+``` service nginx restart ```
+
+Movemos el directorio PhpMyAdmin al directorio raíz de Nginx.
+
+``` mv /downloads/phpMyAdmin-4.9.5-all-languages /var/www/html/phpmyadmin ```
+
+Creamos la lista de directorios necesarios.
+
+``` mkdir /etc/phpmyadmin/upload -p ```
+
+``` mkdir /etc/phpmyadmin/save ```
+
+``` mkdir /etc/phpmyadmin/tmp ```
+
+``` mkdir /var/www/html/phpmyadmin/tmp ```
+
+Establecemos los permisos correctos.
+
+``` chown www-data.www-data /var/www/html/phpmyadmin -R ```
+
+``` chown www-data.www-data /etc/phpmyadmin -R ```
+
+``` chmod 660  /etc/phpmyadmin -R ```
+
+``` chmod 777 /var/www/html/phpmyadmin/tmp -R ```
+
+Creamos el archivo de configuracion de PhpMyAdmin
+
+``` cp /var/www/html/phpmyadmin/config.sample.inc.php /var/www/html/phpmyadmin/config.inc.php ```
+
+Obtenemos nuestra clave con el siguente comando
+
+``` openssl rand -base64 32 ```
+
+Editamos el archivo 
+
+``` nano /var/www/html/phpmyadmin/config.inc.php ```
+
+![imagen22](Fotos/31.png)
+
+Reiniciamos los servicios y vamos al navegador donde vamos a poner nuestra ip
+
+http://10.0.2.15:8080/phpmyadmin/
+
+![imagen24](Fotos/23.png)
+
+tambien podemos poner ya que lo añadimos al principio de este ejercicio
+
+http://servidor2.centro.intranet:8080/phpmyadmin/
+
+![imagen23](Fotos/22.png)
+
+Se mostrará la pantalla de inicio de sesión de PhpMyAdmin.
+
+![imagen24](Fotos/32.png)
 
 
 
