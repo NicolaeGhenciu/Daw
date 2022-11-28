@@ -150,7 +150,51 @@ Ahora abrimos en el navegador nuestra pequeña aplicacion.
 
 ## - Adicionalmente protegeremos el acceso a la aplicación python mediante autenticación
 
+Instalamos el paquete de apache2-utils
 
+``` apt-get install apache2 apache2-utils ```
+
+Creamos un nuevo usuario y almacenamos la contraseña en el fichero .htpasswd, la contraseña sera usuario
+
+``` htpasswd -c /etc/apache2/.htpasswd usuario ```
+
+![imagenps5](Fotos/ps5.png)
+
+Entramos en el fichero de configuracion 000-default.conf
+
+``` nano /etc/apache2/sites-enabled/000-default.conf ```
+
+ Le añadimos las siguentes lineas
+
+``` ruby
+
+<Directory /var/www/html>
+      AuthType Basic
+      AuthName "Secure area - Authentication required"
+      AuthUserFile /etc/apache2/.htpasswd
+      Require user usuario mab55
+</Directory>
+
+```
+Resultado:
+
+![imagenps6](Fotos/ps6.png)
+
+Guardamos los cambios realizados y reiniciamos apache2
+
+``` service apache2 restart ```
+
+Entramos en nuestra pagina donde nos pedira que insertemos la contraseña
+
+![imagenps1](Fotos/ps1.png)
+
+Si la ponemos bien nos saldra nuestra pagina
+
+![imagenps3](Fotos/ps3.png)
+
+Si la ponemos mal nos prohibira entrar con el siguente mensaje
+
+![imagenps2](Fotos/ps2.png)
 
 ## - Instala y configura awstat.
 
