@@ -4,7 +4,7 @@
 
 Empezamos usando el comando :
 
-#### sudo apt update
+``` sudo apt update ```
 
 Usando sudo nano modificamos el archivo /etc/hosts para añadir los dominions
 
@@ -12,11 +12,11 @@ Usando sudo nano modificamos el archivo /etc/hosts para añadir los dominions
 
 Instalación entorno LAMP con el comando
 
-#### sudo apt install apache2
+``` sudo apt install apache2 ```
 
 Instalamos el php con 
 
-#### sudo apt install php y openssh-server
+``` sudo apt install php y openssh-server ```
 
 ![imagen2](Fotos/0.png)
 
@@ -24,11 +24,11 @@ Instalamos el php con
 
 Instalamos Mysql
 
-#### sudo apt install mysql-server
+``` sudo apt install mysql-server ```
 
 Creamos un alojamiento virtual para el sitio web
 
-#### sudo mkdir /var/www/html/centro.intranet
+``` sudo mkdir /var/www/html/centro.intranet ```
 
 Abrimos el archivo de configuración en el directorio sites-available con la siguente configuracion
 
@@ -42,7 +42,7 @@ Ahora habilitamos el host virtual en apache y recargamos apache
 
 Creación de una base de datos de MySQL y un usuario para WordPress.
 
-#### mysql -u root -p
+``` mysql -u root -p ```
 
 ![imagen6](Fotos/6.png)
 
@@ -52,35 +52,35 @@ Instalación de extensiones de PHP adicionales
 
 Actualizamos el sistema con
 
-#### sudo apt update
+``` sudo apt update ```
 
 Instalamos los módulos requeridos con
 
-#### sudo apt install php-curl php-gd php-mbstring php-xml php-xmlrpc php-soap php-intl php-zip
+``` sudo apt install php-curl php-gd php-mbstring php-xml php-xmlrpc php-soap php-intl php-zip ```
 
 Reinicia el servicio apache para activar los módulos que acabas de instalar
 
-#### sudo systemctl restart apache2
+``` sudo systemctl restart apache2 ```
 
 ![imagen8](Fotos/5.png)
 
 Descargamos Wordpress. Esto lo vamos a hacer con una erramienta que se llama curl.
 
-#### cd /tmp
+``` cd /tmp ```
 
-#### sudo apt install curl
+``` sudo apt install curl ```
 
-#### curl -O https://wordpress.org/latest.tar.gz
+``` curl -O https://wordpress.org/latest.tar.gz ```
 
 ![imagen9](Fotos/8.png)
 
 Procedemos a decomprimir con 
 
-#### tar xzvf latest.tar.gz
+``` tar xzvf latest.tar.gz ```
 
 creamos el archivo .htaccess
 
-#### touch /tmp/wordpress/.htaccess
+``` touch /tmp/wordpress/.htaccess ```
 
 ![imagen10](Fotos/9.png)
 
@@ -94,11 +94,13 @@ Cambiamos el nombre de la base de datos, el nombre de usuario y su contraseña, 
 
 Y añadimos al final del fichero config la siguiente línea
 
+``` ruby
 define('FS_METHOD', 'direct');
+```
 
 Ya tenemos instalado Wordpress y ahora accedemos via Web a nuestro servidor
 
-#### https://centro.intranet
+``` https://centro.intranet ```
 
 ![imagen14](Fotos/11.png)
 
