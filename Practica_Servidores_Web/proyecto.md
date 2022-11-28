@@ -148,6 +148,10 @@ Ahora abrimos en el navegador nuestra pequeña aplicacion.
 
 ![imagenpy5](Fotos/py7.png)
 
+## - Adicionalmente protegeremos el acceso a la aplicación python mediante autenticación
+
+
+
 ## - Instala y configura awstat.
 
 Instalamos el AWastat con el comando 
