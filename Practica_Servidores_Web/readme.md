@@ -14,6 +14,8 @@ Instalación entorno LAMP con el comando
 
 ``` sudo apt install apache2 ```
 
+### - Activar los módulos necesarios para ejecutar php y acceder a mysql
+
 Instalamos el php con 
 
 ``` sudo apt install php y openssh-server ```
@@ -38,7 +40,7 @@ Ahora habilitamos el host virtual en apache y recargamos apache
 
 ![imagen5](Fotos/4.png)
 
-### Instalamos y Configuramos Wordpress
+### - Instalamos y Configuramos Wordpress
 
 Creación de una base de datos de MySQL y un usuario para WordPress.
 
