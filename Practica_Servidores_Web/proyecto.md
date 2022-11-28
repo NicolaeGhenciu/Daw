@@ -106,6 +106,48 @@ Ya tenemos instalado Wordpress y ahora accedemos via Web a nuestro servidor
 
 ![imagen14](Fotos/11.png)
 
+## - Activar el módulo “wsgi” para permitir la ejecución de aplicaciones Python
+
+Instalamos python
+
+``` sudo apt install python3 libexpat1 -y ```
+
+![imagenpy1](Fotos/py1.png)
+
+Instalamos apache web server y el mod_wsgi
+
+``` sudo apt install apache2 apache2-utils ssl-cert libapache2-mod-wsgi-py3 -y ```
+
+Ahora vamos a configurar el modulo wsgi de apache, vamos a crear un script de python dentro del directorio web por defecto, sera un script sencillo.
+
+``` sudo nano /var/www/html/wsgitest.py ```
+
+![imagenpy2](Fotos/py8.png)
+
+Guardamos y ejecutamos los siguentes comandos
+
+``` sudo chown www-data:www-data /var/www/html/wsgitest.py ```
+
+``` sudo chmod 775 /var/www/html/wsgitest.py ```
+
+Ahora vamos a editar el archivo de configuracion de host virtual de Apache para servir ese archivo a traves del protocolo HTTP.
+
+``` sudo nano /etc/apache2/sites-enabled/000-default.conf ```
+
+![imagenpy3](Fotos/py3.png)
+
+Reiniciamos Apache2
+
+``` systemctl restart apache2 ```
+
+## - Crea y despliega una pequeña aplicación python para comprobar que funciona correctamente
+
+Ahora abrimos en el navegador nuestra pequeña aplicacion.
+
+![imagenpy4](Fotos/py6.png)
+
+![imagenpy5](Fotos/py7.png)
+
 ## - Instala y configura awstat.
 
 Instalamos el AWastat con el comando 
