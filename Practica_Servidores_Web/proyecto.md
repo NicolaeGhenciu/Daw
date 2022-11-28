@@ -237,7 +237,7 @@ Editamos el archivo pho.ini son sudo nano
 
 ``` locate php.ini ```
 
-``` nanp /etc/php/7.4/fpm/php.ini ```
+``` nano /etc/php/8.1/fpm/php.ini ```
 
 He modificado los siguentes campos
 
