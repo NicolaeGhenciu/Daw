@@ -1,11 +1,15 @@
 # Despliegue de Aplicaciones Web
-Este repositorio incluye actividades llevadas a cabo en el módulo DAW
+Este repositorio incluye actividades y proyectos llevadss a cabo en el módulo de DAW
 
-## Tema 0 - Introducción
+## Proyecto Servidores Web 2º Trimestre
+||
+|----------|
+|[Proyecto Servidores Web 2](Practica_Servidores_Web_2/proyecto2.md)|
 
-|Ejercicios|Descripción|
-|----------|-----------|
-|[Ejercicio 1](Tema0/Ejercicio1.md)|Practica servidor Web|
+## Proyecto Servidores Web 1º Trimestre
+||
+|----------|
+|[Proyecto Servidores Web](Practica_Servidores_Web/proyecto.md)|
 
 ## Tema 1 - Servidores Web
 
@@ -14,13 +18,15 @@ Este repositorio incluye actividades llevadas a cabo en el módulo DAW
 |[Ejercicio 1](Tema1/Ejercicio1.md)|Trabajando con scripts|
 |[Ejercicio 2]|Descripción|
 
-## Proyecto Servidores Web 1º Trimestre
-|Proyecto|
-|----------|
-|[Proyecto Servidores Web](Practica_Servidores_Web/proyecto.md)|
+## Tema 0 - Introducción
 
-## Proyecto Servidores Web 2º Trimestre
-|Proyecto|
-|----------|
-|[Proyecto Servidores Web 2](Practica_Servidores_Web_2/proyecto2.md)|
+|Ejercicios|Descripción|
+|----------|-----------|
+|[Ejercicio 1](Tema0/Ejercicio1.md)|Practica servidor Web|
+
+
+
+
+
+
 
