@@ -26,5 +26,24 @@ Ahora vamos a instalar Apache2, PHP y libapache2-mod-php que es un módulo de Ap
 
 ``` sudo apt-get install apache2 php libapache2-mod-php ```
 
-![imagen1](Fotos/2.png)
+Probamos el servidor en el navegador:
+
+![imagen1](img/1.png)
+
+Ahora Instalamos MySQL y PhpMyAdmin con el siguente comando:
+
+``` sudo apt-get install mysql-server php-mysql phpmyadmin ```
+
+Ahora copiamos el archivo de configuración de phpMyAdmin para Apache:
+
+ ``` sudo cp /etc/phpmyadmin/apache.conf /etc/apache2/sites-available/phpmyadmin.conf ```
+ 
+Habilitamos la configuración de phpMyAdmin en Apache:
+
+``` sudo a2ensite phpmyadmin.conf ```
+
+Y reiniciamos Apache para que los cambios surtan efecto:
+
+```sudo service apache2 restart ```
+
 
