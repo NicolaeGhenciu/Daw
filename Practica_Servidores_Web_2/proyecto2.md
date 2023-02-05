@@ -46,4 +46,87 @@ Y reiniciamos Apache para que los cambios surtan efecto:
 
 ```sudo service apache2 restart ```
 
+Vamos a configurar el servidor Apache para ejecutar PHP e introducimos el siguente comando:
+
+``` sudo nano /etc/apache2/mods-enabled/dir.conf ```
+
+y cambiamos la lista de indices para dejarla en el siguente orden:
+
+``` ruby
+DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
+```
+Comprobamos que en este archivo
+
+```
+root@ubuntu-20:/etc/apache2/mods-available# sudo nano php7.4.conf
+```
+contenga:
+``` ruby
+
+<FilesMatch ".+\.ph(ar|p|tml)$">
+    SetHandler application/x-httpd-php
+</FilesMatch>
+
+```
+para que cualquier archivo que tenga la extensión .php, .phtml, o .phar, usará el controlador "application/x-httpd-php". 
+
+ahora nos vamos a /var/www/html/ y creamos una carpeta llamada directorioPHP
+donde crearemos el siguente documento php:
+
+``` ruby
+<html>
+  <head>
+    <title>Ejemplo de PHP</title>
+  </head>
+  <body>
+    <?php echo "Hola mundo"; ?>
+  </body>
+</html>
+```
+
+Y vamos al navegador para comprobar que todo ha salido bien:
+
+![imagen2](img/2.png)
+
+creamos una nueva carpeta mi-sitio-web a la que le vamos a dar los siguentes permisos:
+
+sudo chown -R www-data:www-data /var/www/html/mi-sitio-web/
+
+y ahora creamos un archivo index.php con el mismo contenido que antes
+
+ahora nos dirijimos a apache2/sites-available# sudo nano mi-sitio-web.conf y creamos un host virtual
+
+``` ruby
+<VirtualHost *:80>
+    ServerName mi-sitio-web.com
+    DocumentRoot /var/www/html/mi-sitio-web
+    <Directory /var/www/html/mi-sitio-web>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+</VirtualHost>
+```
+
+a continuacion introducimos
+
+``` 
+sudo a2ensite mi-sitio-web.conf 
+sudo systemctl restart apache2
+```
+
+y vamos al navegador para introducir la siguente ruta:
+
+http://localhost/mi-sitio-web/
+
+si todo fuciona tendriamos que ver el mismo holamundo de antes
+
+![imagen3](img/3.png)
+
+
+``` ruby
+
+```
+
+
 
