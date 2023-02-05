@@ -15,3 +15,16 @@
     * Se creará un subdominio en el servidor DNS con las resolución directa e inversa
     * Se creará una base de datos además de un usuario con todos los permisos sobre dicha base de datos (ALL PRIVILEGES)
     * Se habilitará la ejecución de aplicaciones Python con el servidor web
+
+### Para la instalación, configuración y puesta en marcha del servidor mencionado usare Ubuntu-Desktop.
+
+Lo primero que vamos a hacer es actualizar los paquetes con:
+
+``` sudo apt-get update ```
+
+Ahora vamos a instalar Apache2, PHP y libapache2-mod-php que es un módulo de Apache que permite a Apache interactuar con PHP.
+
+``` sudo apt-get install apache2 php libapache2-mod-php ```
+
+![imagen1](Fotos/2.png)
+
