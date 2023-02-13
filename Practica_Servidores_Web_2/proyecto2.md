@@ -18,33 +18,6 @@
 
 ### Para la instalación, configuración y puesta en marcha del servidor mencionado usare Ubuntu-Desktop.
 
-Lo primero que vamos a hacer es actualizar los paquetes con:
-
-``` sudo apt-get update ```
-
-Ahora vamos a instalar Apache2, PHP y libapache2-mod-php que es un módulo de Apache que permite a Apache interactuar con PHP.
-
-``` sudo apt-get install apache2 php libapache2-mod-php ```
-
-Probamos el servidor en el navegador:
-
-![imagen1](img/1.png)
-
-Ahora Instalamos MySQL y PhpMyAdmin con el siguente comando:
-
-``` sudo apt-get install mysql-server php-mysql phpmyadmin ```
-
-Ahora copiamos el archivo de configuración de phpMyAdmin para Apache:
-
- ``` sudo cp /etc/phpmyadmin/apache.conf /etc/apache2/sites-available/phpmyadmin.conf ```
- 
-Habilitamos la configuración de phpMyAdmin en Apache:
-
-``` sudo a2ensite phpmyadmin.conf ```
-
-Y reiniciamos Apache para que los cambios surtan efecto:
-
-```sudo service apache2 restart ```
 
 Vamos a configurar el servidor Apache para ejecutar PHP e introducimos el siguente comando:
 
@@ -68,65 +41,66 @@ contenga:
 </FilesMatch>
 
 ```
-para que cualquier archivo que tenga la extensión .php, .phtml, o .phar, usará el controlador "application/x-httpd-php". 
 
-ahora nos vamos a /var/www/html/ y creamos una carpeta llamada directorioPHP
-donde crearemos el siguente documento php:
+Script:
 
 ``` ruby
-<html>
-  <head>
-    <title>Ejemplo de PHP</title>
-  </head>
-  <body>
-    <?php echo "Hola mundo"; ?>
-  </body>
-</html>
+#! /bin/bash
+
+user=$1
+
+if [ -z "$user" ]; then
+  echo "Debe proporcionar un nombre de usuario como argumento."
+  exit 1
+fi
+
+mysql -u root -e "CREATE DATABASE $user;"
+
+mysql -u root -e "USE $user;"
+
+mysql -u root -e "CREATE USER '$user'@'localhost' IDENTIFIED BY '12345';GRANT ALL PRIVILEGES ON $user.* TO '$user'@'localhost';"
+
+mkdir /var/www/html/$user
+touch /var/www/html/$user/index.html
+echo "<!DOCTYPE html><html><head><title>Bienvenido a mi pagina web</title></head><body><h1>Bienvenido a mi sitio web</h1><p>Esta es mi pagina de bienvenida.</p></body></html>" >> /var/www/html/$user/index.html
+
+sudo adduser $user
+sudo service vsftpd restart
+
+#DNS
+echo "$user.localnet.net.     IN     A     192.168.85.168" >> /etc/bind/db.localnet.net
+
+#DNS inverso
+echo "168      IN      PTR      $user.localnet.net." >> /etc/bind/db.85.168.192
+
+systemctl reload bind9
 ```
 
-Y vamos al navegador para comprobar que todo ha salido bien:
-
-![imagen2](img/2.png)
-
-creamos una nueva carpeta mi-sitio-web a la que le vamos a dar los siguentes permisos:
-
-sudo chown -R www-data:www-data /var/www/html/mi-sitio-web/
-
-y ahora creamos un archivo index.php con el mismo contenido que antes
-
-ahora nos dirijimos a apache2/sites-available# sudo nano mi-sitio-web.conf y creamos un host virtual
+Ejecutamos el script:
 
 ``` ruby
-<VirtualHost *:80>
-    ServerName mi-sitio-web.com
-    DocumentRoot /var/www/html/mi-sitio-web
-    <Directory /var/www/html/mi-sitio-web>
-        Options Indexes FollowSymLinks
-        AllowOverride All
-        Require all granted
-    </Directory>
-</VirtualHost>
+./ScriptDaw.sh [Parametro]
 ```
 
-a continuacion introducimos
+Insertamos el nombre y la contraseña:
 
-``` 
-sudo a2ensite mi-sitio-web.conf 
-sudo systemctl restart apache2
-```
+![imagen1](img/1.png)
 
-y vamos al navegador para introducir la siguente ruta:
+Cerramos sesion y nos dirijimos al usuario que hemos creado con el script
 
-http://localhost/mi-sitio-web/
+![imagen2](img/3.png)
 
-si todo fuciona tendriamos que ver el mismo holamundo de antes
+ponemos localhost/nicoaleadrian que es el usuario que hemos creado para ver nuestra pagina web.
 
 ![imagen3](img/3.png)
 
 
+![imagen4](img/4.png)
+![imagen5](img/5.png)
+![imagen6](img/6.png)
+![imagen7](img/7.png)
+![imagen8](img/8.png)
+
 ``` ruby
 
 ```
-
-
-
