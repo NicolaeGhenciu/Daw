@@ -18,8 +18,7 @@
 
 ### Para la instalación, configuración y puesta en marcha del servidor mencionado usare Ubuntu-Desktop.
 
-
-Vamos a configurar el servidor Apache para ejecutar PHP e introducimos el siguente comando:
+Instalamos php, mysql y todo lo necesario una vez hecho esto vamos a configurar el servidor Apache para ejecutar PHP e introducimos el siguente comando:
 
 ``` sudo nano /etc/apache2/mods-enabled/dir.conf ```
 
@@ -41,6 +40,50 @@ contenga:
 </FilesMatch>
 
 ```
+
+Ahora vamos a instalar pyhton.
+
+``` 
+apt-get install python3 libexpat1 -y 
+apt-get install apache2 apache2-utils ssl-cert libapache2-mod-wsgi -y
+```
+
+Ahora configuramos el Apache para el mod wsgi:
+```
+nano /var/www/html/wsgy.py
+
+def application(environ,start_response):
+    status = '200 OK'
+    html = 'html>\n' \
+           '<body>\n' \
+           '<div style="width: 100% color: blue; font-size: 40px; font-weight: bold; text-align: center;">\n' \
+           'Bienvenido a mi pagina con python\n' \
+           '</div>\n' \
+           '</body>\n' \
+           '</html>\n'
+    response_header = [('Content-type','text/html')]
+    start_response(status,response_header)
+    return [html]
+
+```
+
+Ahora guardamos y ejecutamos este comando:
+
+```chown www-data:www-data /var/www/html/wsgy.py```
+
+```nano /etc/apache2/conf-available/wsgi.conf```
+
+y añadimos la siguente linea:
+
+```WSGIScriptAlias /wsgi /var/www/html/wsgy.py```
+
+Instalamos el bind y hacemos las configuraciones pertinentes y creamos el script.
+
+### Aqui el Script
+
+```a2enconf wsgi
+systemctl restart apache2```
+
 
 Script:
 
@@ -86,7 +129,7 @@ Insertamos el nombre y la contraseña:
 
 ![imagen1](img/1.png)
 
-Cerramos sesion y nos dirijimos al usuario que hemos creado con el script
+Cerramos sesion y nos dirijimos al usuario que hemos creado con el script.
 
 ![imagen2](img/3.png)
 
@@ -94,13 +137,47 @@ ponemos localhost/nicoaleadrian que es el usuario que hemos creado para ver nues
 
 ![imagen3](img/3.png)
 
+Ahora nos dirijimos al localhost/nicolaeadrian/phpmyadmin para comprobar que nos ha creado la base de datos e introducimos nuestras credenciales.
 
 ![imagen4](img/4.png)
+
+Y listo ya tenemos acceso a nuestra base de datos:
+
 ![imagen5](img/5.png)
-![imagen6](img/6.png)
+
+Probamos si ejecuta aplicaciones python
+
+localhost/wsgi
+
 ![imagen7](img/7.png)
-![imagen8](img/8.png)
 
-``` ruby
+Ahora nos vamos a conectar mediante FTP con filezilla
 
-```
+comprobamos que el servicio este activo:
+
+![imagen15](img/15.png)
+
+Introducimos en el servidor nuestra ip y en el puerto ponemos 21, luego ponermos nuestras credenciales y deberia de conectarnos perfectamente:
+
+![imagen11](img/11.png)
+
+![imagen12](img/12.png)
+
+Ahora vamos a comprobar el dns, primero ponemos el ping:
+
+![imagen17](img/17.png)
+
+y ahora el nslookup:
+
+![imagen18](img/18.png)
+
+Aqui el archivo de dns:
+
+![imagen10](img/10.png)
+
+y aqui el de dns inversa
+
+![imagen9](img/9.png)
+
+
+
