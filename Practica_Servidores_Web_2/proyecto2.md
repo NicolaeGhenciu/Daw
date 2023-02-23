@@ -163,6 +163,37 @@ Introducimos en el servidor nuestra ip y en el puerto ponemos 21, luego ponermos
 
 ![imagen12](img/12.png)
 
+Nos vamos a conectar por ssh al usuario creado con el script nicolaeadrian usando mobaXterm
+
+Primero comprobamos que el ssh este activo:
+
+![imagen108](img/109.png)
+
+Ahora creamos una sesion y ponemos el usuario y la contraseña
+
+![imagen109](img/108.png)
+
+Si todo ha salido bien nos tendria que salir esto:
+
+![imagen110](img/110.png)
+
+![imagen107](img/107.png)
+
+Nos conectamos tambien con ftp
+
+![imagen106](img/106.png)
+![imagen105](img/105.png)
+
+Le vamos a subir mediante ftp una foto logo.png a la sesion de nicolaeadrian
+
+![imagen104](img/104.png)
+
+Ahora mediante ssh vamos a la carpeta descargas y ahi podemos ver la foto
+
+![imagen102](img/102.png)
+![imagen103](img/103.png)
+![imagen101](img/101.png)
+
 Ahora vamos a comprobar el dns, primero ponemos el ping:
 
 ![imagen17](img/17.png)
