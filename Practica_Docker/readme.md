@@ -152,6 +152,29 @@ Para eliminar el escenario:
 
 ### Ejemplo 2: Despliegue de la aplicación Temperaturas
 
+En el fichero docker-compose.yml vamos a definir el escenario. El programa docker-compose se debe ejecutar en el directorio donde este ese fichero.
+
+![imagen52](img/52.png)
+
+Para crear el escenario:
+
+![imagen50](img/50.png)
+
+Para listar los contenedores:
+
+![imagen51](img/51.png)
+
 ### Ejemplo 3: Despliegue de Wordpress + mariadb
 
+En el fichero docker-compose.yml vamos a definir el escenario. El programa docker-compose se debe ejecutar en el directorio donde este ese fichero.
+
+![imagen53](img/53.png)
+
+Para crear el escenario:
+
+![imagen54](img/54.png)
+
+Para listar los contenedores:
+
+![imagen55](img/55.png)
 
