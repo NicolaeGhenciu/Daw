@@ -14,8 +14,13 @@ Instala Docker en Ubuntu:
 
 ### Lleva a cabo la práctica descrita en el primer artículo
 - Ejecuta la imagen "hello-world"
+
+![imagen2](img/2.png)
+
 - Muestra las imágenes Docker instaladas
 - Muestra los contenedores Docker
+
+![imagen3](img/3.png)
 
 ### Lleva a cabo la práctica descrita en el segundo artículo
 - Edita el fichero Dockerfile
