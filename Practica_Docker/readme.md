@@ -178,3 +178,5 @@ Para listar los contenedores:
 
 ![imagen55](img/55.png)
 
+![imagen56](img/56.png)
+
