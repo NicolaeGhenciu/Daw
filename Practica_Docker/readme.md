@@ -130,5 +130,28 @@ https://github.com/josedom24/curso_docker_ies
 
 - Lleva a cabo al menos tres de los ejemplos mostrados en el módulo y documentalo en tu repositorio incluyendo capturas de pantalla.
 
+### Ejemplo 1: Despliegue de la aplicación Guestbook
+
+En el fichero docker-compose.yml vamos a definir el escenario. El programa docker-compose se debe ejecutar en el directorio donde este ese fichero.
+
+![imagen40](img/40.png)
+
+Instalamos docker-composer
+
+![imagen41](img/41.png)
+
+Para crear el escenario:
+
+![imagen42](img/42.png)
+
+Para listar los contenedores:
+Para parar los contenedores:
+Para eliminar el escenario:
+
+![imagen43](img/43.png)
+
+### Ejemplo 2: Despliegue de la aplicación Temperaturas
+
+### Ejemplo 3: Despliegue de Wordpress + mariadb
 
 
