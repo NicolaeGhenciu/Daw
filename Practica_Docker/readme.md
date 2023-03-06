@@ -60,16 +60,42 @@ Editamos el archivo docker:
 - Descarga la imagen de ubuntu
 - Descarga la imagen de hello-world
 - Descarga la imagen nginx
+
+![imagen13](img/13.png)
+
 - Muestra un listado de todas la imágenes
+
+![imagen14](img/14.png)
+
 - Ejecuta un contenedor hello-world y dale nombre “myhello1”
 - Ejecuta un contenedor hello-world y dale nombre “myhello2”
 - Ejecuta un contenedor hello-world y dale nombre “myhello3”
+
+![imagen15](img/15.png)
+![imagen16](img/16.png)
+![imagen17](img/17.png)
+
 - Muestra los contenedores que se están ejecutando
+
+![imagen18](img/18.png)
+
 - Para el contenedor "myhello1”
 - Para el contenedor "myhello2”
+
+![imagen19](img/19.png)
+
 - Borra el contenedor “myhello1”
+
+![imagen20](img/20.png)
+
 - Muestra los contenedores que se están ejecutando.
+
+![imagen21](img/21.png)
+
 - Borra todos los contenedores
+
+![imagen22](img/22.png)
+![imagen23](img/23.png)
 
 ## Docker. Práctica 4
 
