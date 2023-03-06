@@ -41,11 +41,11 @@ Editamos el archivo docker:
 
 ![imagen7](img/7.png)
 
+![imagen9](img/9.png)
+
 ![imagen8](img/8.png)
 
 - Create una cuenta en hub.docker.com
-
-![imagen9](img/9.png)
 
 ![imagen10](img/10.png)
 
