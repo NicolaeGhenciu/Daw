@@ -104,16 +104,20 @@ https://github.com/josedom24/curso_docker_ies
 
 - Lleva a cabo al menos tres de los ejemplos mostrados en el módulo y documentalo en tu repositorio incluyendo capturas de pantalla.
 
-#### Ejemplo 1: Despliegue de la aplicación Guestbook ####
+### Ejemplo 1: Despliegue de la aplicación Guestbook
 
 ![imagen24](img/24.png)
 ![imagen26](img/26.png)
 ![imagen25](img/25.png)
 
-#### Ejemplo 2: Despliegue de la aplicación Temperaturas
+### Ejemplo 2: Despliegue de la aplicación Temperaturas
 
 ![imagen27](img/27.png)
 ![imagen28](img/28.png)
+
+### Ejemplo 2: Despliegue de Wordpress + mariadb
+
+
 
 ## Docker. Práctica 5
 
