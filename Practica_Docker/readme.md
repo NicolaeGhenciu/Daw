@@ -110,6 +110,11 @@ https://github.com/josedom24/curso_docker_ies
 ![imagen26](img/26.png)
 ![imagen25](img/25.png)
 
+#### Ejemplo 2: Despliegue de la aplicación Temperaturas
+
+![imagen27](img/27.png)
+![imagen28](img/28.png)
+
 ## Docker. Práctica 5
 
 ### Lee la documentación del módulo cuatro “Docker-compose” del curso:
