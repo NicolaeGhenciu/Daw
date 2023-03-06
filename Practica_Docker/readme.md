@@ -24,10 +24,36 @@ Instala Docker en Ubuntu:
 
 ### Lleva a cabo la práctica descrita en el segundo artículo
 - Edita el fichero Dockerfile
+
+Vamos a la carpeta.
+
+![imagen4](img/4.png)
+
+Editamos el archivo docker:
+
+![imagen5](img/5.png)
+
 - Construye el contenedor
+
+![imagen6](img/6.png)
+
 - Ejecútalo
+
+![imagen7](img/7.png)
+
+![imagen8](img/8.png)
+
 - Create una cuenta en hub.docker.com
+
+![imagen9](img/9.png)
+
+![imagen10](img/10.png)
+
 - Publícalo
+
+![imagen11](img/11.png)
+
+![imagen12](img/12.png)
 
 ## Docker. Práctica 3
 
