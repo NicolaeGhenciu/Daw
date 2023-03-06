@@ -115,9 +115,13 @@ https://github.com/josedom24/curso_docker_ies
 ![imagen27](img/27.png)
 ![imagen28](img/28.png)
 
-### Ejemplo 2: Despliegue de Wordpress + mariadb
+### Ejemplo 3: Despliegue de Wordpress + mariadb
 
-
+![imagen30](img/30.png)
+![imagen31](img/31.png)
+![imagen32](img/32.png)
+![imagen33](img/33.png)
+![imagen34](img/34.png)
 
 ## Docker. Práctica 5
 
