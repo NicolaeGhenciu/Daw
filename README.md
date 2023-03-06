@@ -4,7 +4,7 @@ Este repositorio incluye actividades y proyectos llevadss a cabo en el módulo d
 ## Proyecto Despliegue de aplicaciones con Docker 2º Trimestre
 ||
 |----------|
-|[Proyecto Despliegue de aplicaciones con Docker 2º Trimestre](Pratica_Docker/readme.md)|
+|[Proyecto Despliegue de aplicaciones con Docker 2º Trimestre](Practica_Docker/readme.md)|
 
 ## Proyecto Servidores Web 2º Trimestre
 ||
