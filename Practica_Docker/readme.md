@@ -1,1 +1,23 @@
-a
+# Práctica 2 - Despliegue de aplicaciones con Docker
+## Se propone la puesta en marcha de un servidor Docker y el desarrollo de las prácticas especificadas en el tema de “Introducción a Docker”
+Se incluirá:
+- Puesta en marcha en local.
+- Se alojará el código de las prácticas propuestas en GitHub
+
+## Docker. Práctica 1
+
+Instala Docker en Ubuntu:
+
+## Docker. Práctica 2
+
+### Lleva a cabo la práctica descrita en el primer artículo
+- Ejecuta la imagen "hello-world"
+- Muestra las imágenes Docker instaladas
+- Muestra los contenedores Docker
+
+### Lleva a cabo la práctica descrita en el segundo artículo
+- Edita el fichero Dockerfile
+- Construye el contenedor
+- Ejecútalo
+- Create una cuenta en hub.docker.com
+- Publícalo
