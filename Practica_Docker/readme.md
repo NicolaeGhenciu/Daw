@@ -8,6 +8,8 @@ Se incluirá:
 
 Instala Docker en Ubuntu:
 
+![imagen1](img/1.png)
+
 ## Docker. Práctica 2
 
 ### Lleva a cabo la práctica descrita en el primer artículo
